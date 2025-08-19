@@ -12,7 +12,7 @@ if "conversation" not in st.session_state:
         {"role": "system", "content": "You are a helpful chatbot."}
     ]
 
-user_input = st.text_input("You: Please share your inputs: ", "")
+user_input = st.text_input("Hi! Please ask : ", "")
 
 if st.button("Send") and user_input:
     st.session_state.conversation.append({"role": "user", "content": user_input})
