@@ -26,4 +26,3 @@ if st.button("Send") and user_input:
 for msg in st.session_state.conversation[1:]:  # skip system message
     role = "👤 You" if msg["role"] == "user" else "🤖 Bot"
     st.write(f"**{role}:** {msg['content']}")
-    clear_text() 
