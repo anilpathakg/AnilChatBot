@@ -5,14 +5,14 @@ import os
 # API Key (will be set in Streamlit Cloud later, not here)
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
-st.title("💬 My AI Chatbot")
+st.title("💬 Anil Pathak's AI Chatbot")
 
 if "conversation" not in st.session_state:
     st.session_state.conversation = [
         {"role": "system", "content": "You are a helpful chatbot."}
     ]
 
-user_input = st.text_input("You:", "")
+user_input = st.text_input("You: Please share your inputs: ", "")
 
 if st.button("Send") and user_input:
     st.session_state.conversation.append({"role": "user", "content": user_input})
